@@ -33,7 +33,7 @@
         echo $msg;
          ?>
       <label for="">Password</label>
-        <input data-js-input type="password" name="password" maxlength="" value="" required><br>
+        <input data-js-input="password" type="password" name="password" maxlength="" value="" required><br>
       <label for="">City</label>
       <?php
         require ('include/connex.php');
