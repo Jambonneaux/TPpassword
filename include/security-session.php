@@ -1,6 +1,10 @@
 <?php
 
-session_start();
+if (isset($_SESSION)) {
+}
+else {
+    session_start();
+}
 
 //Session fingerprint pour bloqué la navigation url
 
