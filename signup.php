@@ -5,7 +5,7 @@
     <title>Sign up</title>
 
     <script src="./scripts/script.js" defer></script>
-    
+
   </head>
   <body>
       <!--Sign up form-->
@@ -33,7 +33,7 @@
         echo $msg;
          ?>
       <label for="">Password</label>
-        <input type="password" name="password" maxlength="" value="" required><br>
+        <input data-js-input type="password" name="password" maxlength="" value="" required><br>
       <label for="">City</label>
       <?php
         require ('include/connex.php');
