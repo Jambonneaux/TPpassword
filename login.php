@@ -7,7 +7,9 @@
   <body>
 
 <?php
-
+if (isset($_SESSION)) {
+    echo 'session ouverte';
+}
 //Msg validation mdp
 
 $msg = '';
