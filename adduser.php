@@ -12,16 +12,26 @@ $passReg = '/^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{12,}$/';
 $blacklisting = array('11111111111a', 'monmotdepasse1', 'motdepassesuper1', '1234567890ab');
 
 
-for ($i = 0; $i < count($blacklisting); $i++) {
-
-    if ($_POST['password'] == $blacklisting[$i]) {
-        //Retourne sur signup si mdp ne correspond pas au critère
-
-        header('Location: signup.php?msg=2');
-    }
-}
+//for ($i = 0; $i < count($blacklisting); $i++) {
+//
+//    if ($_POST['password'] == $blacklisting[$i]) {
+//        //Retourne sur signup si mdp ne correspond pas au critère
+//
+//        header('Location: signup.php?msg=2');
+//    }
+//}
 
 if (preg_match($passReg, $_POST['password'])) {
+
+
+    for ($i = 0; $i < count($blacklisting); $i++) {
+
+        if ($_POST['password'] == $blacklisting[$i]) {
+            //Retourne sur signup si mdp ne correspond pas au critère
+
+            header('Location: signup.php?msg=2');
+        }
+    }
 
     //Assignation du post en variable
 
