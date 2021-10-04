@@ -44,35 +44,4 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-    for (var i = 0; i < elInput.length; i++) {
-
-        console.log(elInput[i].value);
-
-        if (elInput[i].name == 'password') {
-
-            console.log(elInput.value);
-
-            if (passRegex.test(elInput.value)) {
-
-            }
-            else if (elInput[i].required && elInput[i].value == '') {
-
-                isValid = false
-                elInput[i].classList.add('error');
-            }
-        }
-
-    }
 })();
