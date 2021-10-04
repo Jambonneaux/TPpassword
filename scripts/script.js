@@ -6,7 +6,7 @@
         console.log(elInput);
 
 
-    if (elInput.dataset.jsInput == 'password') {
+    if (elInput.dataset == 'password') {
                 console.log(elInputs.value);
             }
 
