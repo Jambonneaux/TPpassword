@@ -22,16 +22,8 @@ for ($i = 0; $i < count($blacklisting); $i++) {
 
 }
 
-if (!preg_match($passReg, $_POST['password'])) {
+if (preg_match($passReg, $_POST['password'])) {
 
-    $isValid = false;
-
-    //Retourne sur signup si mdp ne correspond pas au critère
-
-    header('Location: signup.php?msg=1');
-
-}
-else {
     //Assignation du post en variable
 
     foreach ($_POST as $key => $value) {
@@ -44,6 +36,15 @@ else {
 
     $sql = "INSERT INTO user (name, email, username, password, userCityId) VALUES ('$name', '$email', '$username', '$passHash', $userCityId);";
 
+
+}
+else {
+
+    $isValid = false;
+
+    //Retourne sur signup si mdp ne correspond pas au critère
+
+    header('Location: signup.php?msg=1');
 
 }
 
