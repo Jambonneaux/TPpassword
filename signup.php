@@ -20,10 +20,10 @@
 
         if (isset($_GET['msg'])) {
             if ($_GET['msg'] == 1) {
-                $msg = '<style color=red>Votre mot de passe doit contenir :<br> *12 caractères ou plus. <br>*Un chiffre et une lettre.<br></style>';
+                $msg = 'Votre mot de passe doit contenir :<br> *12 caractères ou plus. <br>*Un chiffre et une lettre.<br>';
             }
             elseif ($_GET['msg'] == 2) {
-                $msg = '<style color=red>Votre mot de passe fait partie d\'une liste noire de mot de passe éssayer en un autre.<br></style>';
+                $msg = 'Votre mot de passe fait partie d\'une liste noire de mot de passe éssayer en un autre.<br>';
             }
         }
 
