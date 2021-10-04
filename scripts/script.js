@@ -5,14 +5,10 @@
 
         console.log(elInput);
 
-    for (let i = 0; i < elInput.length; i++) {
 
-        console.log(elInput[i].dataset.jsInput);
+    if (elInput.dataset.jsInput == 'password') {
+                console.log(elInputs.value);
+            }
 
-
-        if (elInput[i].dataset.jsInput == 'password') {
-                    products.push(elInputs[i].value);
-                }
-    }
 
 })();
