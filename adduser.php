@@ -36,23 +36,23 @@ if (preg_match($passReg, $_POST['password'])) {
 
     //Assignation du post en variable
 
-//    foreach ($_POST as $key => $value) {
-//        $$key = mysqli_real_escape_string($con, $value);
-//    }
+    foreach ($_POST as $key => $value) {
+        $$key = mysqli_real_escape_string($con, $value);
+    }
 
     //Pssword hash php
 
-//    $passHash = password_hash($password, PASSWORD_BCRYPT);
+    $passHash = password_hash($password, PASSWORD_BCRYPT);
 
-//    $sql = "INSERT INTO user (name, email, username, password, userCityId) VALUES ('$name', '$email', '$username', '$passHash', $userCityId);";
+    $sql = "INSERT INTO user (name, email, username, password, userCityId) VALUES ('$name', '$email', '$username', '$passHash', $userCityId);";
 
 
-//    //Error si la requête sql ne passe pas
+    //Error si la requête sql ne passe pas
 
-//    if (mysqli_query($con, $sql)) {
+    if (mysqli_query($con, $sql)) {
 
-//        header('Location: login.php');
-//    }
+        header('Location: login.php');
+    }
     //else {
     //    echo 'Error :( - '. mysqli_error($con);
     //}
