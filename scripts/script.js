@@ -47,7 +47,6 @@
         }
         else {
             e.preventDefault();
-            header('Location : signup.php?msg=1');
         }
         return isValid
     }
