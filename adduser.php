@@ -10,22 +10,28 @@ require ('include/connex.php');
 
 $passReg = '/^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{12,}$/';
 $blacklisting = array('11111111111a', 'monmotdepasse1', 'motdepassesuper1', '1234567890ab');
-
+$isValid = true;
 
 for ($i = 0; $i < count($blacklisting); $i++) {
 
     if ($_POST['password'] == $blacklisting[$i]) {
         //Retourne sur signup si mdp ne correspond pas au critère
-
+        $isValid = false;
         header('Location: signup.php?msg=2');
     }
+
 }
 
-if (preg_match($passReg, $_POST['password']),!$blacklisting[$i]) {
+if (!preg_match($passReg, $_POST['password'])) {
 
+    $isValid = false;
 
+    //Retourne sur signup si mdp ne correspond pas au critère
 
+    header('Location: signup.php?msg=1');
 
+}
+else {
     //Assignation du post en variable
 
     foreach ($_POST as $key => $value) {
@@ -39,23 +45,11 @@ if (preg_match($passReg, $_POST['password']),!$blacklisting[$i]) {
     $sql = "INSERT INTO user (name, email, username, password, userCityId) VALUES ('$name', '$email', '$username', '$passHash', $userCityId);";
 
 
-    //Error si la requête sql ne passe pas
-
-    if (mysqli_query($con, $sql)) {
-
-        header('Location: login.php');
-    }
-    //else {
-    //    echo 'Error :( - '. mysqli_error($con);
-    //}
-}
-else {
-    //Retourne sur signup si mdp ne correspond pas au critère
-
-    header('Location: signup.php?msg=1');
 }
 
-
+if ($isValid) {
+    header('Location: login.php');
+}
 
 
 
