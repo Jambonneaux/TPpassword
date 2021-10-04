@@ -21,7 +21,7 @@ for ($i = 0; $i < count($blacklisting); $i++) {
     }
 }
 
-if (preg_match($passReg, $_POST['password'])) {
+if (preg_match($passReg, $_POST['password']),!$blacklisting[$i]) {
 
 
 
