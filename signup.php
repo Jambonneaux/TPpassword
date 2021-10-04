@@ -13,11 +13,11 @@ include_once('include/security-session.php');
       <!--Sign up form-->
     <form class="" action="adduser.php" method="post">
       <label for="">Name</label>
-        <input type="text" name="name" maxlength="45" value=""><br>
+        <input type="text" name="name" maxlength="45" value="" required><br>
       <label for="">Username</label>
-        <input type="email" name="username" maxlength="45" value=""><br>
+        <input type="email" name="username" maxlength="45" value="" required><br>
       <label for="">Email</label>
-        <input type="email" name="email" maxlength="45" value=""><br>
+        <input type="email" name="email" maxlength="45" value="" required><br>
         <?php
 
         //Msg du regEx password
@@ -35,7 +35,7 @@ include_once('include/security-session.php');
         echo $msg;
          ?>
       <label for="">Password</label>
-        <input type="password" name="password" maxlength="" value=""><br>
+        <input type="password" name="password" maxlength="" value="" required><br>
       <label for="">City</label>
       <?php
         require ('include/connex.php');
