@@ -26,7 +26,7 @@
                 isValid = false;
                 elInput[i].classList.add('error');
             }
-            
+
             if (passRegex.test(pass)) {
 
             }
@@ -64,7 +64,7 @@
 
             console.log(elInput.value);
 
-            if (passReg.test(elInput.value)) {
+            if (passRegex.test(elInput.value)) {
 
             }
             else if (elInput[i].required && elInput[i].value == '') {
