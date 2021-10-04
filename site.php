@@ -10,7 +10,7 @@
         session_start();
 
         include ('include/connex.php');
-
+        include ('include/security-session.php');
         //Msg de bienvenu
 
         echo '<h1>Bienvenu dans mon site vide utilisateur: '. $_SESSION['name']. '</h1>';
