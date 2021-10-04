@@ -25,7 +25,7 @@
             }
             else {
                 isValid = false;
-                elInput[3].classList.add('error');
+                elInput[3].closest.classList.add('error');
             }
 
             if (passRegex.test(pass) ) {
@@ -33,7 +33,7 @@
             }
             else {
                 isValid = false;
-                elInput[3].classList.add('error');
+                elInput[3].closest.classList.add('error');
             }
         }
 
