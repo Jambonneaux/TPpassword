@@ -17,7 +17,7 @@
 
         for (let i = 0; i < elInput.length; i++) {
 
-            let pass = elInput[i].value;
+            let pass = elInput[3].value;
 
             if (elInput[3].name == 'password' && elInput[i].value != '') {
 
