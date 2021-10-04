@@ -17,7 +17,7 @@
         let isValid = true;
 
         for (let i = 0; i < elInput.length; i++) {
-            for (var i = 0; i < elLabel.length; i++) {
+            for (let l = 0; l < elLabel.length; l++) {
 
 
                 let pass = elInput[3].value;
