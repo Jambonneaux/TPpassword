@@ -13,7 +13,6 @@
 
 
     function errorRed(e) {
-        e.preventDefault();
         let isValid = true;
 
         for (let i = 0; i < elInput.length; i++) {
@@ -25,7 +24,7 @@
             }
             else {
                 isValid = false;
-                elInput[3].closest.classList.add('error');
+                elInput[3].classList.add('error');
             }
 
             if (passRegex.test(pass) ) {
@@ -33,11 +32,16 @@
             }
             else {
                 isValid = false;
-                elInput[3].closest.classList.add('error');
+                elInput[3].classList.add('error');
             }
         }
 
+        if (isValid) {
 
+        }
+        else {
+            e.preventDefault();
+        }
         return isValid
     }
 
