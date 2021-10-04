@@ -12,6 +12,13 @@ L'utilisateur aura à entré des informations personel afin d'entrer dans la bas
 
 Ce travail ne nécéssite aucune installation de l'utilisateur
 
+## Plan de sécurisation
+
+- Utilisation du password_hash de PHP variante PASSWORD_BCRYPT avec un salage aléatoire.
+- Utilisation d'une session avec fingerprint pour empècher la navigation par url.
+- Utilisation d'une expression régulière pour avoir des mot de passe de 12 caractères minimum contenant 1 chiffre et 1 lettre minimum.
+
+
 ## Contribution
 
 Moi même
