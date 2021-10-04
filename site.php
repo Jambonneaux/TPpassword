@@ -7,8 +7,9 @@
     <body>
 
         <?php
-        session_start();
-
+        if (!isset($_SESSION)) {
+            session_start();
+        }
         include ('include/connex.php');
         include ('include/security-session.php');
         //Msg de bienvenu
