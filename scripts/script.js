@@ -13,6 +13,7 @@
 
 
     function errorRed(e) {
+        e.preventDefault();
         let isValid = true;
 
         for (let i = 0; i < elInput.length; i++) {
