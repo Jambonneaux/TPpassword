@@ -53,7 +53,7 @@
 
         ?>
     </select><br><br>
-        <input type="submit" name="" value="Sign up"><br><br>
+        <input data-js-signup type="submit" name="" value="Sign up"><br><br>
     </form>
     <form class="" action="login.php" method="post">
         <input type="submit" name="" value="Sign in">
