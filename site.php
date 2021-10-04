@@ -7,7 +7,9 @@
     <body>
 
         <?php
-        if (!isset($_SESSION)) {
+        if (isset($_SESSION)) {
+        }
+        else {
             session_start();
         }
         include ('include/connex.php');
