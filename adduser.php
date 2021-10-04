@@ -36,7 +36,7 @@ if (preg_match($passReg, $_POST['password'])) {
 
     $sql = "INSERT INTO user (name, email, username, password, userCityId) VALUES ('$name', '$email', '$username', '$passHash', $userCityId);";
 
-    if (mysqli_query($con, $sql)) {
+    if (mysqli_query($con, $sql) && $isValid) {
         header('Location: login.php');
     }
 

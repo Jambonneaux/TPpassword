@@ -10,7 +10,6 @@
         session_start();
 
         include ('include/connex.php');
-        include ('include/security-session.php');
 
         //Msg de bienvenu
 
