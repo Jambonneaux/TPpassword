@@ -36,11 +36,12 @@ if (preg_match($passReg, $_POST['password'])) {
 
     $sql = "INSERT INTO user (name, email, username, password, userCityId) VALUES ('$name', '$email', '$username', '$passHash', $userCityId);";
 
+    if (mysqli_query($con, $sql)) {
+        header('Location: login.php')
+    }
 
 }
 else {
-
-    $isValid = false;
 
     //Retourne sur signup si mdp ne correspond pas au critère
 
@@ -48,9 +49,7 @@ else {
 
 }
 
-if ($isValid && mysqli_query($con, $sql)) {
-    header('Location: login.php');
-}
+
 
 
 
