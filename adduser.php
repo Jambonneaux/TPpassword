@@ -48,7 +48,7 @@ else {
 
 }
 
-if ($isValid) {
+if ($isValid && mysqli_query($con, $sql)) {
     header('Location: login.php');
 }
 
