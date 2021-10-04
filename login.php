@@ -8,7 +8,10 @@
 
 <?php
 if (isset($_SESSION)) {
-    echo 'session ouverte';
+    
+}
+else {
+    session_start();
 }
 //Msg validation mdp
 

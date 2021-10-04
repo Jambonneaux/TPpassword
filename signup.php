@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Sign up</title>
+
+    <script src="./scripts/script.js" defer></script>
+    
   </head>
   <body>
       <!--Sign up form-->
