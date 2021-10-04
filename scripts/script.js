@@ -2,6 +2,7 @@
 
     let passRegex = /^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{12,}$/,
         elInput = document.querySelectorAll(['input']),
+        elLabel = document.querySelectorAll(['label']),
         elBtnSignup = document.querySelector('[data-js-signup]'),
         isValid = true;
 
@@ -16,23 +17,28 @@
         let isValid = true;
 
         for (let i = 0; i < elInput.length; i++) {
+            for (var i = 0; i < elLabel.length; i++) {
 
-            let pass = elInput[3].value;
 
-            if (elInput[3].name == 'password' && elInput[i].value != '') {
+                let pass = elInput[3].value;
 
-            }
-            else {
-                isValid = false;
-                elInput[3].classList.add('error');
-            }
+                if (elInput[3].name == 'password' && elInput[i].value != '') {
 
-            if (passRegex.test(pass) ) {
+                }
+                else {
+                    isValid = false;
+                    elInput[3].classList.add('error');
+                    elLabel[3].classList.add('error');
+                }
 
-            }
-            else {
-                isValid = false;
-                elInput[3].classList.add('error');
+                if (passRegex.test(pass) ) {
+
+                }
+                else {
+                    isValid = false;
+                    elInput[3].classList.add('error');
+                    elLabel[3].classList.add('error');
+                }
             }
         }
 
