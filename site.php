@@ -5,11 +5,13 @@
         <title>In site</title>
     </head>
     <body>
+
         <?php
         session_start();
 
         include ('include/connex.php');
 
+        echo '<h1>Bienvenu dans mon site vide utilisateur: '. $_SESSION['name']. '</h1>';
         $userId = $_SESSION['userId'];
 
         //Link de Session id avec db
@@ -27,7 +29,7 @@
 
 
          ?>
-         <br>         
+         <br>
          <!--Logout et destroy session-->
 
          <form class="" action="logout.php" method="post">
