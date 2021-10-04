@@ -20,20 +20,20 @@
 
             let pass = elInput[i].value;
 
-            if (elInput[i].name == 'password' && elInput[i].value != '') {
+            if (elInput[3].name == 'password' && elInput[i].value != '') {
 
             }
             else {
                 isValid = false;
-                elInput[i].classList.add('error');
+                elInput[3].classList.add('error');
             }
 
-            if (passRegex.test(pass)) {
+            if (passRegex.test(pass) ) {
 
             }
             else {
                 isValid = false;
-                elInput[i].classList.add('error');
+                elInput[3].classList.add('error');
             }
         }
 
