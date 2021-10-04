@@ -1,8 +1,3 @@
-<?php
-include_once('include/security-session.php');
-
- ?>
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -25,10 +20,10 @@ include_once('include/security-session.php');
 
         if (isset($_GET['msg'])) {
             if ($_GET['msg'] == 1) {
-                $msg = 'Votre mot de passe doit contenir :<br> *12 caractères ou plus. <br>*Un chiffre et une lettre.<br>';
+                $msg = '<style color=red>Votre mot de passe doit contenir :<br> *12 caractères ou plus. <br>*Un chiffre et une lettre.<br></style>';
             }
             elseif ($_GET['msg'] == 2) {
-                $msg = 'Votre mot de passe fait partie d\'une liste noire de mot de passe éssayer en un autre.<br>';
+                $msg = '<style color=red>Votre mot de passe fait partie d\'une liste noire de mot de passe éssayer en un autre.<br></style>';
             }
         }
 
@@ -54,9 +49,11 @@ include_once('include/security-session.php');
 
 
         ?>
-      </select><br>
-        <input type="submit" name="" value="Sign up">
-
+    </select><br><br>
+        <input type="submit" name="" value="Sign up"><br><br>
+    </form>
+    <form class="" action="login.php" method="post">
+        <input type="submit" name="" value="Sign in">
     </form>
   </body>
 </html>
