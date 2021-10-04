@@ -10,6 +10,8 @@
         session_start();
 
         include ('include/connex.php');
+        
+        //Msg de bienvenu
 
         echo '<h1>Bienvenu dans mon site vide utilisateur: '. $_SESSION['name']. '</h1>';
         $userId = $_SESSION['userId'];
